@@ -1,6 +1,7 @@
 #include "platform.h"
 #include "ui_platform.h"
 
+
 platform::platform(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::platform)
@@ -52,6 +53,13 @@ platform::platform(QWidget *parent) :
 
     mainLayout->addLayout(ipmanagerLayout,0,0);
     mainLayout->addLayout(deviceLayout,1,0);
+
+    QStringList list_ip = servernet.Getip();
+    for (auto item : list_ip)
+    {
+        qDebug() <<"My localhost IPv4 address: "<< item;
+        ipBox->addItem(item,item);
+    }
 
     this->setLayout(mainLayout);
     this->resize(1500,800);

@@ -11,6 +11,7 @@
 #include <QLabel>
 #include <QHeaderView>
 #include <QTableWidgetItem>
+#include "servernetwork.h"
 
 namespace Ui {
 class platform;
@@ -35,10 +36,11 @@ private:
     QComboBox *ipBox;
     QLabel *localipLabel;
     QTableWidget *devicetable;
+    QTableWidgetItem *headerItem;
 
 private:
     Ui::platform *ui;
-    QTableWidgetItem *headerItem;
+    serverNetwork servernet;
 };
 
 #endif // PLATFORM_H

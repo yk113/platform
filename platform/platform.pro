@@ -5,7 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
-
+QT       += network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = platform
@@ -26,10 +26,12 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        platform.cpp
+        platform.cpp \
+    servernetwork.cpp
 
 HEADERS += \
-        platform.h
+        platform.h \
+    servernetwork.h
 
 FORMS += \
         platform.ui
