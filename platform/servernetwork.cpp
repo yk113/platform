@@ -16,10 +16,8 @@ QStringList serverNetwork::Getip()
        {
            //我们使用IPv4地址
            list_ip << address.toString();
-           qDebug() <<"My localhost IPv4 address: "<< address.toString();
+           //qDebug() <<"My localhost IPv4 address: "<< address.toString();
        }
     }
     return list_ip;
-
-    //return 0;
 }

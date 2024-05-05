@@ -57,9 +57,11 @@ platform::platform(QWidget *parent) :
     QStringList list_ip = servernet.Getip();
     for (auto item : list_ip)
     {
-        qDebug() <<"My localhost IPv4 address: "<< item;
         ipBox->addItem(item,item);
     }
+
+    connect(startBtn,&QPushButton::clicked,this,&platform::on_startBtn_clicked);
+
 
     this->setLayout(mainLayout);
     this->resize(1500,800);
@@ -69,3 +71,10 @@ platform::~platform()
 {
     delete ui;
 }
+
+void platform::on_startBtn_clicked()
+{
+   qDebug() <<"start search";
+}
+
+

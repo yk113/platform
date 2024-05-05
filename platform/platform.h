@@ -11,6 +11,7 @@
 #include <QLabel>
 #include <QHeaderView>
 #include <QTableWidgetItem>
+#include <QObject>
 #include "servernetwork.h"
 
 namespace Ui {
@@ -24,6 +25,7 @@ class platform : public QWidget
 public:
     explicit platform(QWidget *parent = nullptr);
     ~platform();
+    void on_startBtn_clicked();
 
 private:
     QGridLayout *mainLayout;
